@@ -1,7 +1,7 @@
 FROM jstarcher/jenkins-slave-ubuntu
 MAINTAINER Jordan Starcher <jstarcher@gmail.com>
 
-RUN apt-get install -y python-pip && \
-    pip install fabric
+RUN apt-get update && \
+    apt-get install -y fabric
 
 CMD ["/usr/sbin/sshd", "-D"]
